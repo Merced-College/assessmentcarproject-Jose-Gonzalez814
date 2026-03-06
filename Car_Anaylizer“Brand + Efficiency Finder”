@@ -121,7 +121,9 @@ public class CarProject {
                 case 4: showStats(); break;
                 case 5: System.out.println("Exiting..."); break;
                 default: System.out.println("Invalid choice.");
-            }
-        }
-    }
+            		}
+        		}
+    		}
+		}
+	}
 }
