@@ -1,10 +1,11 @@
+//Jose Gonzalez
 public class Car_Anaylzer"Brand + Efficency Finder" {
 
 	public static void main(String[] args) {
  import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//Gives us everything we know about the car from Car_Data.csv
 class Car {
     private String carID;
     private String brand;
@@ -13,7 +14,7 @@ class Car {
     private String fuelType;
     private String color;
     private double mileage;
-
+//Puts everything for each car together
     public Car(String carID, String brand, String model, int year, String fuelType, String color, double mileage) {
         this.carID = carID;
         this.brand = brand;
@@ -23,7 +24,7 @@ class Car {
         this.color = color;
         this.mileage = mileage;
     }
-
+//gets the brang, type of fuel, and the mileage
     public String getBrand() { return brand; }
     public String getFuelType() { return fuelType; }
     public double getMileage() { return mileage; }
@@ -57,7 +58,7 @@ public class CarProject {
             System.out.println("Error loading file: " + e.getMessage());
         }
     }
-
+//selects by brand
     public static void selectionSortByBrand() {
         for (int i = 0; i < carList.size() - 1; i++) {
             int minIdx = i;
@@ -72,9 +73,9 @@ public class CarProject {
         }
         System.out.println("List sorted by Brand.");
     }
-
+//searchs for specific brand
     public static void binarySearchBrand(String target) {
-        selectionSortByBrand(); // Must be sorted first
+        selectionSortByBrand(); // must be sorted first
         int low = 0, high = carList.size() - 1;
         boolean found = false;
         while (low <= high) {
@@ -88,7 +89,7 @@ public class CarProject {
         }
         if (!found) System.out.println("Brand '" + target + "' not found.");
     }
-
+//shows stats such as total mileage on car
     public static void showStats() {
         if (carList.isEmpty()) return;
         double totalMileage = 0;
