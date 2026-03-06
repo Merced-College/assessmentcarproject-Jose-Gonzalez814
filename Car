@@ -8,7 +8,7 @@ public class Car {
     private double mileage;
 
     public Car(String carID, String brand, String model, int year,
-               String fuelType, String color, double mileage) {
+        String fuelType, String color, double mileage) {
         this.carID = carID;
         this.brand = brand;
         this.model = model;
